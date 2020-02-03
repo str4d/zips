@@ -58,6 +58,30 @@ Both of these goals can be served by enabling multiple asset types to exist with
 shielded pool.
 
 
+Requirements
+============
+
+It should be possible to create new asset types in a completely decentralized, permissionless and lightweight way.
+
+It should be possible to include multiple asset types (including native ZEC) in the same atomic transaction.
+
+The protocol should by maintain strong privacy of the sender, recipient, amount and asset type. In particular, it should be indistinguishable which asset types (including native ZEC) are involved in a transaction, to someone who doesn't have the requisite keys.
+
+Integrity (the "balance" property) should be maintained and be publicly verifiable, even without knowing which asset types are involved.
+
+Selective disclosure features (incoming, outgoing and full viewing keys, as well as selective disclosure) should support user-defined assets, and reveal the asset type along with the amount.
+
+Performance and transaction sizes should be similar to Sapling.
+
+
+Non-requirements
+================
+
+It is acceptable to require a one-time change to the zk-SNARK circuit (and the requisite MPC ceremony, if necessitated by the proof system).
+
+Exchange functionality (order matching, auctions, etc.) is outscope the scope of this ZIP. While multi-asset transactions can be used to atomically settle agreed-upon trades, the creation of such transactions is also outside the scope of this ZIP.
+
+
 Conventions
 ===========
 
@@ -196,7 +220,7 @@ TODO: Define (assetType, value, authority) usage.
 Issuance
 --------
 
-TBD
+TBD: Specify, and add to Requirements / Non-requirements
 
 Consensus rules
 ---------------
